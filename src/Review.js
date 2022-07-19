@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import people from "./data";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
+import reviews from "./data";
 
 const Review = () => {
   const [review, setReview] = useState(people)
   const [person, setPerson] = useState(0)
 
   const changePerson = () => {
-    const number = Math.floor(Math.random() * (review.length-1));
-    if(person !== number){
-      setPerson(number)
+    let number = Math.floor(Math.random() * review.length);
+    if(person === number){
+      number < review.length-1 ? number += 1 : number = 0;
     }
+    setPerson(number)
   }
 
   // }
