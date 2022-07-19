@@ -10,7 +10,7 @@ function App() {
     </div>
     {reviews.map((review)=>{
       return(
-        <Review review={review}/>
+        <Review review={review} key={review.id}/>
       )
     })}
     </main>
