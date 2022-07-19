@@ -19,7 +19,6 @@ const Review = () => {
     // console.log(review);
   const { id, name, job, image, text } = review[`${person}`];
   return (
-    <section className="container">
       <div className="review">
         <div className="img-container">
           <div className="quote-icon">
@@ -27,16 +26,15 @@ const Review = () => {
           </div>
           <img src={image} alt={name} className="person-img" />
         </div>
-        <div className="author"> {name}</div>
-        <div className="job">{job}</div>
-        <div className="info">{text}</div>
+        <h4 className="author"> {name}</h4>
+        <p className="job">{job}</p>
+        <p className="info">{text}</p>
         <div >
           <FaChevronLeft className="prev-btn" onClick={()=>setPerson(person !== 0 ? person - 1 : review.length-1)}/>
           <FaChevronRight className="next-btn" onClick={()=>setPerson(person !== review.length-1 ? person + 1 : 0)}/>
         </div>
         <button className="random-btn" onClick={()=>changePerson()}>Surprise Me</button>
       </div>
-    </section>
   );
 };
 
