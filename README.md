@@ -1,5 +1,5 @@
-# In This Project I used
-* I pulled data from a ready data.
-* I brought it to life using various javascript functions.
-* useState
-* react-icons
+# In This Project I
+* Pulled data from a ready data.
+* Brought it to life using various javascript functions.
+* UseState
+* React-icons
